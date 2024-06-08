@@ -4,6 +4,7 @@
   <InfoBlock />
   <HelpAndSupport />
   <GalleryBlock />
+  <MapApi />
 </template>
 
 <script lang="ts">
@@ -13,7 +14,7 @@ import HeaderComponent from "./components/HeaderComponent.vue";
 import InfoBlock from "./components/InfoBlock.vue";
 import HelpAndSupport from "./components/HelpAndSupp.vue";
 import GalleryBlock from "./components/GalleryBlock.vue";
-
+import MapApi from "./components/MapApi.vue";
 export default defineComponent({
   name: "App",
   components: {
@@ -22,6 +23,7 @@ export default defineComponent({
     InfoBlock,
     HelpAndSupport,
     GalleryBlock,
+    MapApi,
   },
 });
 </script>

@@ -71,7 +71,7 @@ export default defineComponent({
   display: grid;
   grid-template-columns: 571px 275px 275px;
   grid-template-rows: 275px 275px;
-  gap: 10px;
+  gap: 20px;
 }
 
 .gallery-grid a.large {
