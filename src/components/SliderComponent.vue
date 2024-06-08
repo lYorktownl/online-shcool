@@ -1,5 +1,6 @@
 <template>
-  <swiper :slides-per-view="1" navigation pagination>
+  <div class="swiper">
+    <swiper :slides-per-view="1" navigation pagination>
     <swiper-slide>
       <div>Слайд 1</div>
     </swiper-slide>
@@ -10,6 +11,8 @@
       <div>Слайд 3</div>
     </swiper-slide>
   </swiper>
+  </div>
+  
 </template>
 
 <script>
@@ -25,5 +28,7 @@ export default {
 </script>
 
 <style scoped>
-
+.swiper {
+  width: 1160px;
+}
 </style>

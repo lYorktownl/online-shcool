@@ -1,26 +1,27 @@
 <template>
+  <HeaderComponent />
   <SliderComponent />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import SliderComponent from "./components/SliderComponent.vue";
+import HeaderComponent from "./components/HeaderComponent.vue";
 
 export default defineComponent({
   name: "App",
   components: {
+    HeaderComponent,
     SliderComponent,
+
   },
 });
 </script>
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 1400px;
+  margin: 0 auto 0 auto;
+  font-family: 'Gilroy', sans-serif;
 }
 </style>
