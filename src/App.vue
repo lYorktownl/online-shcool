@@ -3,6 +3,7 @@
   <SliderComponent />
   <InfoBlock />
   <HelpAndSupport />
+  <GalleryBlock />
 </template>
 
 <script lang="ts">
@@ -11,6 +12,7 @@ import SliderComponent from "./components/SliderComponent.vue";
 import HeaderComponent from "./components/HeaderComponent.vue";
 import InfoBlock from "./components/InfoBlock.vue";
 import HelpAndSupport from "./components/HelpAndSupp.vue";
+import GalleryBlock from "./components/GalleryBlock.vue";
 
 export default defineComponent({
   name: "App",
@@ -19,6 +21,7 @@ export default defineComponent({
     SliderComponent,
     InfoBlock,
     HelpAndSupport,
+    GalleryBlock,
   },
 });
 </script>
