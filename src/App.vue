@@ -5,6 +5,7 @@
   <HelpAndSupport />
   <GalleryBlock />
   <MapApi />
+  <FooterComponent />
 </template>
 
 <script lang="ts">
@@ -15,6 +16,8 @@ import InfoBlock from "./components/InfoBlock.vue";
 import HelpAndSupport from "./components/HelpAndSupp.vue";
 import GalleryBlock from "./components/GalleryBlock.vue";
 import MapApi from "./components/MapApi.vue";
+import FooterComponent from "./components/FooterComponent.vue";
+
 export default defineComponent({
   name: "App",
   components: {
@@ -24,6 +27,7 @@ export default defineComponent({
     HelpAndSupport,
     GalleryBlock,
     MapApi,
+    FooterComponent,
   },
 });
 </script>

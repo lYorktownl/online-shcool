@@ -49,8 +49,7 @@ export default defineComponent({
   color: #22253b;
   width: 1160px;
   flex-direction: column;
-  padding: 20px;
-  margin: auto;
+  margin: 0 auto 0 auto;
 }
 .help-support {
   justify-content: flex-start;
@@ -63,7 +62,7 @@ export default defineComponent({
   flex-direction: row;
   gap: 32px;
   border-radius: 10px;
-  padding: 16px;
+  padding-bottom: 32px;
 }
 .text-block {
   width: 730px;

@@ -1,6 +1,9 @@
 <template>
   <div class="code-block">
-    <h1 class="title">Обучение в CoDe — это удобно и результативно</h1>
+    <h1 class="title">
+      Обучение в CoDe — это <br />
+      удобно и результативно
+    </h1>
     <div class="features">
       <div class="feature" v-for="(feature, index) in features" :key="index">
         <img :src="require(`@/assets/icons/${feature.icon}`)" alt="Icon" />
@@ -73,13 +76,16 @@ export default defineComponent({
 <style scoped>
 .code-block {
   text-align: center;
-  padding: 20px;
+  margin: 0 auto 60px auto;
+  max-width: 1160px;
 }
 .title {
   font-size: 46px;
   font-weight: 600;
   line-height: 46px;
   text-align: center;
+  margin-top: 60px;
+  margin-bottom: 32px;
 }
 .features {
   display: flex;
