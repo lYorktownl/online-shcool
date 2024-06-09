@@ -130,4 +130,40 @@ export default defineComponent({
   margin: auto;
   padding-top: 10px;
 }
+@media (max-width: 320px) {
+  .title {
+    font-size: 24px;
+    line-height: 28px;
+    margin-top: 30px;
+    margin-bottom: 16px;
+  }
+
+  .features {
+    flex-flow : column wrap;
+    gap: 10px;
+  }
+
+  .feature {
+    width: 145px;
+    height: 175px;
+    padding: 20px 10px;
+  }
+
+  .feature img {
+    width: 48px;
+    height: 48px;
+    margin-top: 0;
+  }
+
+  .feature h2 {
+    font-size: 14px;
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .feature p {
+    font-size: 12px;
+    width: 100%;
+  }
+}
 </style>
