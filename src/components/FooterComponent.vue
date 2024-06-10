@@ -1,7 +1,7 @@
 <template>
   <div class="footer">
-    <div class="logo">
-      <div>
+    <div class="content">
+      <div class="logo">
         <div class="title">
           <p>
             <span class="highlight1">C</span>o<span class="highlight2">D</span>e
@@ -70,10 +70,11 @@
                 <clipPath id="clip0_22102_4210">
                   <rect width="35" height="35" fill="white" />
                 </clipPath>
-              </defs></svg
-          ></a>
-          <a href="#"
-            ><svg
+              </defs>
+            </svg>
+          </a>
+          <a href="#">
+            <svg
               width="35"
               height="35"
               viewBox="0 0 35 35"
@@ -95,10 +96,11 @@
                 <clipPath id="clip0_22102_4214">
                   <rect width="35" height="35" fill="white" />
                 </clipPath>
-              </defs></svg
-          ></a>
-          <a href="#"
-            ><svg
+              </defs>
+            </svg>
+          </a>
+          <a href="#">
+            <svg
               width="35"
               height="35"
               viewBox="0 0 35 35"
@@ -120,8 +122,9 @@
                 <clipPath id="clip0_22102_4218">
                   <rect width="35" height="35" fill="white" />
                 </clipPath>
-              </defs></svg
-          ></a>
+              </defs>
+            </svg>
+          </a>
         </div>
       </div>
 
@@ -168,23 +171,42 @@ a svg:hover #instagram {
 }
 
 .footer {
-  margin: 60px auto 0 auto;
-  width: 1160px;
+  margin: 60px auto 0;
+  max-width: 1160px;
+
+  @media (max-width: 320px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    margin-top: 25px;
+  }
 }
 
-.logo {
+.content {
   display: flex;
+  flex-direction: row;
   font-size: 36px;
   line-height: 37.58px;
   font-weight: 500;
-  flex-direction: row;
-}
 
-.logo .highlight1 {
+  @media (max-width: 320px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.logo {
+  @media (max-width: 320px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.content .highlight1 {
   color: #f15525;
 }
 
-.logo .highlight2 {
+.content .highlight2 {
   color: #0d99ff;
 }
 
@@ -208,38 +230,54 @@ a svg:hover #instagram {
   font-weight: 400;
   line-height: 13.57px;
   text-align: left;
-
+  a {
+    color: inherit;
+  }
   a:hover {
     color: #f15525;
+  }
+
+  @media (max-width: 320px) {
+    margin: 0;
   }
 }
 
 .socials {
-  margin-top: 40px;
-  margin-bottom: 113px;
+  margin: 40px 0 113px;
 
   a {
     margin-right: 16px;
 
-    &img {
+    svg {
       transition: fill 0.3s;
       fill: inherit;
       stroke: inherit;
       stroke-width: inherit;
+
       &:hover {
         fill: #f15525;
       }
     }
   }
+
+  @media (max-width: 320px) {
+    margin: 23px 0 43px;
+    width: fit-content;
+  }
 }
 
 .contacts {
   display: flex;
-  margin-right: 33px;
   flex-direction: column;
   font-size: 16px;
   font-weight: 400;
   line-height: 23px;
+  margin-right: 33px;
+
+  @media (max-width: 320px) {
+    margin: 0;
+    align-items: center;
+  }
 }
 
 .tel {
@@ -247,13 +285,12 @@ a svg:hover #instagram {
 }
 
 .underline {
-  margin-top: 28px;
-  margin-bottom: 26px;
   display: flex;
   color: #8e8e8e;
   font-size: 16px;
   font-weight: 400;
   line-height: 23px;
+  margin: 28px 0 26px;
 
   p {
     margin-right: auto;
@@ -262,7 +299,22 @@ a svg:hover #instagram {
   a {
     margin-left: 64px;
 
-    &:hover {
+    color: #8e8e8e;
+  }
+  a:hover {
+    color: #f15525;
+  }
+
+  @media (max-width: 320px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+
+    a {
+      margin: 0;
+      color: #f15525;
+    }
+    a:visited {
       color: #f15525;
     }
   }
@@ -270,14 +322,18 @@ a svg:hover #instagram {
 
 hr {
   border-color: #d8d8d8;
+
+  @media (max-width: 320px) {
+    width: 100%;
+  }
 }
 
 a {
   text-decoration: none;
-}
 
-a:visited {
-  color: inherit;
+  a:visited {
+    color: inherit;
+  }
 }
 
 p {
@@ -286,6 +342,13 @@ p {
 
 ul {
   margin: 0;
+  padding: 0;
+
+  @media (max-width: 320px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 li {

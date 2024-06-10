@@ -1,7 +1,11 @@
 <template>
   <HeaderComponent />
-  <SliderComponent @showModal="showModal"/>
-  <ModalWindow :isVisible="isModalVisible" @close="closeModal" @submit="handleFormSubmit"/>
+  <SliderComponent @showModal="showModal" />
+  <ModalWindow
+    :isVisible="isModalVisible"
+    @close="closeModal"
+    @submit="handleFormSubmit"
+  />
   <InfoBlock />
   <HelpAndSupport />
   <GalleryBlock />
@@ -19,7 +23,6 @@ import HelpAndSupport from "./components/HelpAndSupp.vue";
 import GalleryBlock from "./components/GalleryBlock.vue";
 import MapApi from "./components/MapApi.vue";
 import FooterComponent from "./components/FooterComponent.vue";
-
 
 export default defineComponent({
   name: "App",
@@ -47,7 +50,7 @@ export default defineComponent({
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const handleFormSubmit = (formData: any) => {
-      console.log('Form submitted with data:', formData);
+      console.log("Form submitted with data:", formData);
       // Handle form submission logic here
     };
 
@@ -62,10 +65,16 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@font-face {
+  font-family: "Gilroy";
+  src: url("@/assets/fonts/Gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 #app {
-  width: 1400px;
+  max-width: 1400px;
   margin: 0 auto 0 auto;
-  font-family: "Gilroy", sans-serif;
+  font-family: "Gilroy";
   color: #22253b;
 }
 @media (max-width: 320px) {

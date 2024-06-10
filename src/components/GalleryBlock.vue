@@ -65,7 +65,7 @@ export default defineComponent({
 <style scoped>
 .main {
   margin: 0 auto 0 auto;
-  width: 1160px;
+  max-width: 1160px;
 }
 .gallery-grid {
   display: grid;
@@ -89,5 +89,44 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+@media (max-width: 870px) {
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .gallery-grid a.large {
+    grid-column: span 1;
+    height: auto;
+  }
+}
+@media (max-width: 320px) {
+  .main {
+    width: 300px;
+    padding: 10px;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    grid-template-rows: auto; /* Automatically sized rows */
+    gap: 10px;
+  }
+
+  .gallery-grid a.large {
+    grid-column: span 2;
+    width: 300px;
+    height: 300px; /* Span two columns */
+  }
+
+  .gallery-grid a {
+    width: 145px;
+    height: auto;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    height: auto;
+  }
 }
 </style>

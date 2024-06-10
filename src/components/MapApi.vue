@@ -54,7 +54,7 @@ export default defineComponent({
 
 <style scoped>
 .map-container {
-  width: 1160px;
+  max-width: 1160px;
   height: 423px;
   margin: 60px auto 0 auto;
 }
@@ -63,5 +63,11 @@ export default defineComponent({
   width: 100%;
   height: 100%;
   border-radius: 30px;
+}
+@media (max-width: 320px) {
+  .map-container {
+    margin-top: 14px;
+    width: 300px;
+  }
 }
 </style>

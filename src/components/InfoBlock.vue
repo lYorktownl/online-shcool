@@ -7,8 +7,10 @@
     <div class="features">
       <div class="feature" v-for="(feature, index) in features" :key="index">
         <img :src="require(`@/assets/icons/${feature.icon}`)" alt="Icon" />
-        <h2>{{ feature.title }}</h2>
-        <p>{{ feature.description }}</p>
+        <div>
+          <h2>{{ feature.title }}</h2>
+          <p>{{ feature.description }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -73,7 +75,7 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .code-block {
   text-align: center;
   margin: 0 auto 60px auto;
@@ -97,7 +99,7 @@ export default defineComponent({
 .feature {
   justify-content: center;
   background-color: #f0f4f8;
-  border-radius: 30px;
+  border-radius: 20px;
   width: 270px;
   height: 254px;
 }
@@ -131,39 +133,65 @@ export default defineComponent({
   padding-top: 10px;
 }
 @media (max-width: 320px) {
+  .code-block {
+    margin-bottom: 30px;
+  }
   .title {
     font-size: 24px;
-    line-height: 28px;
+    line-height: 26px;
     margin-top: 30px;
     margin-bottom: 16px;
   }
 
   .features {
-    flex-flow : column wrap;
     gap: 10px;
+    margin: 0 auto 0 auto;
   }
 
   .feature {
-    width: 145px;
-    height: 175px;
+    width: 125px;
+    height: auto;
     padding: 20px 10px;
   }
-
+  .feature:last-child {
+    width: 300px;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    h2,
+    p {
+      text-align: left;
+      margin-left: 17px;
+      margin-right: 47px;
+      width: 154px;
+    }
+    img {
+      margin-left: 45px;
+    }
+  }
   .feature img {
-    width: 48px;
-    height: 48px;
+    width: 40px;
+    height: 40px;
     margin-top: 0;
   }
 
   .feature h2 {
-    font-size: 14px;
-    width: 100%;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: center;
+    width: 90%;
     margin-top: 10px;
   }
 
   .feature p {
     font-size: 12px;
     width: 100%;
+
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: center;
   }
 }
 </style>
