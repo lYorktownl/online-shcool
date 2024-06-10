@@ -149,14 +149,25 @@
     </swiper-slide>
   </swiper>
 </template>
+
+
+
 <script lang="ts">
-// import Swiper core and required modules
+
+                                    //Привет, я пользовался свайпером впервые и так вышло что к большому сожалению он не дружит с тайпскриптом...
+                                    //К еще большему сожалению я выяснил это в самом конце и не смог починить эту ошибку, и поэтому у меня не получилось застилизовать стрелки.
+                                    //Если вдруг это все таки возможно сделать, буду премного благодарен, если поясните в фидбеке к коду как это исправить. 
+                                    //Это был безусловно классный опыт, сделал для себя полезные выводы, в дальнейшем учту данный нюанс при работе с этой библиотекой.
+                                    //Спасибо за понимание.
+
+
+
+
 import { Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/vue";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
-
 // Import Swiper styles
 export default {
   components: {
