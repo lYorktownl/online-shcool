@@ -91,24 +91,6 @@ img {
   width: 100%;
   height: auto;
 }
-//   @media (max-width: 768px) {
-//     .section {
-//     display: flex;
-//     width: 100%;
-//     flex-direction: column;
-//     align-items: center;
-//     gap: 20px;
-//     padding-bottom: 20px;
-//     margin: 0 50px;
-//   }
-
-//   .text-block {
-//     max-width: 760px;
-//     width: auto;
-//     height: auto;
-//     padding: 0 20px;
-//   }
-// }
 @media (max-width: 320px) {
   .main {
     width: 300px;
